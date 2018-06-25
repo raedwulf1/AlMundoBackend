@@ -20,7 +20,7 @@ Run `npm run dev` for a dev server. Navigate to `http://localhost:8000/`. The ap
 The applicacion its currently using a mock of database,  its configured to use mongodb on http://localhost:27017, but the applicacion have its Post, Put, Delete and Get methods 
 
 # Español
-La aplicacion actualmente esta utilizando una simulacion de la base de datos, pero en caso de utilizar una base de datos con mongo, este esta configurado para apuntar a http://localhost:27017, he igualmente la aplicacion posee sus correspondientes metodos Post, Put, Delete y Get 
+La aplicacion actualmente esta utilizando una simulacion de la base de datos, pero en caso de utilizar una base de datos con mongo, este esta configurado a http://localhost:27017, he igualmente la aplicacion posee sus correspondientes metodos Post, Put, Delete y Get
 
 
 ## Further help

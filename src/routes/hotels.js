@@ -22,6 +22,13 @@ router.get('/', (req, res) => {
 
 /* GET filter hotels. */
 router.get('/search', (req, res) => { 
+/* Using MongoDB */
+   /* db.hotels.find((err, hotels) =>{
+       if (err)return err;
+       var hotelsFinds
+     });*/
+
+
   var hotelsFinds = hotels; 
   if( typeof req.query.name != 'undefined' ){
     hotelsFinds = hotels.filter(function(hotel){
