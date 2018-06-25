@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.engine('html',require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs');
