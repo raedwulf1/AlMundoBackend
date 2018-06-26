@@ -11,25 +11,29 @@ var hotels = require('../database-mock/data.json');
 /* GET hotels listing. */
 router.get('/', (req, res) => {
  
-/* Using MongoDB */
+/* Using MongoDB enable this code if connect to mongo*/
    /* db.hotels.find((err, hotels) =>{
        if (err)return err;
        res.json(hotels);
      });*/
 
+
+     /* Disable this line if use Mongo*/
    res.send(JSON.stringify(hotels, null, 2));
 });
 
 /* GET filter hotels. */
 router.get('/search', (req, res) => { 
-/* Using MongoDB */
+/* Using MongoDB enable this code if connect to mongo*/
    /* db.hotels.find((err, hotels) =>{
        if (err)return err;
-       var hotelsFinds
+       var hotelsFinds = hotels
      });*/
 
-
+     /* Disable this line if use Mongo*/
   var hotelsFinds = hotels; 
+
+
   if( typeof req.query.name != 'undefined' ){
     hotelsFinds = hotels.filter(function(hotel){
       if(hotel.name.toLowerCase().includes(req.query.name.toLowerCase())) {
@@ -65,13 +69,13 @@ router.get('/search', (req, res) => {
 
 /* GET hotels by id. */
 router.get('/:id', (req, res) => {
- /* Using MongoDB */
+ /* Using MongoDB enable this code if connect to mongo*/
    /* db.hotels.findOne({_id: req.params.id}(err, hotels) =>{
        if (err)return err;
        res.json(hotels);
      });*/
 
-     /* Just for testing Purpose*/
+     
   var index = parseInt(req.params.id);
   if (index === 0 || index && hotels[index]){
     res.send(JSON.stringify(hotels[index], null, 2));
@@ -105,7 +109,7 @@ router.delete('/hotels/:id', (req, res, next) => {
     });
 });
 
-/* DELETE a hotel. */
+/* PUT a hotel. */
 router.put('/hotels/:id', (req, res, next) => {
   const hotel = req.body;
   const updateHotel = {};
