@@ -4,10 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## English
 To Start the project:
-the application can star using the next commands of npm: `npm start`, or using `npm run prestart` and then `npm run start`
+First execute the command npm install on the root of this project
+The application can star using the next commands of npm: `npm start`, or using `npm run prestart` and then `npm run start`
 
 ## Español
-Para Iniciar el Proyecto
+Para Iniciar el Proyecto:
+Primero Ejecutar el comando npm install en la raiz del proyecto.
 La aplicacion puede iniciar utilizando los siguientes comandos de npm: `npm start`, o usando `npm run prestart` y luego `npm run start`
 
 ## Development server
